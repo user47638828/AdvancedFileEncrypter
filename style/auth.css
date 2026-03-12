@@ -1,0 +1,6 @@
+body { display:flex; justify-content:center; align-items:center; height:100vh; background:#1e1e2f; color:white; font-family:sans-serif; }
+.login-container { text-align:center; padding:30px; background:#2a2a3d; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.5);}
+input { padding:10px; width:200px; margin:10px 0; border-radius:6px; border:none; }
+button { padding:10px 20px; border:none; border-radius:6px; background:#5c6bc0; color:white; cursor:pointer; }
+button:hover { background:#7986cb; }
+.logo { width:80px; margin-bottom:20px; }
