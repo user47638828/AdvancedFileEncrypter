@@ -13,3 +13,10 @@ function base64ToArrayBuffer(base64){
     for(let i=0;i<len;i++) bytes[i] = binary.charCodeAt(i);
     return bytes.buffer;
 }
+
+function generateRandomString(length){
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{};:,.<>?';
+    let str = '';
+    for(let i=0;i<length;i++){ str += chars[Math.floor(Math.random()*chars.length)]; }
+    return str;
+}
