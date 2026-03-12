@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>AFE - Login</title>
-    <link rel="stylesheet" href="style/auth.css">
+<meta charset="UTF-8">
+<title>Advanced File Encrypter</title>
+<link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-    <div class="login-container">
-        <img src="assets/logo.png" alt="Logo" class="logo">
-        <h2>Advanced File Encrypter</h2>
-        <input type="password" id="password" placeholder="Passwort">
-        <button id="loginBtn">Login</button>
+<div class="login-container" id="loginPanel">
+    <h2>AFE - Login</h2>
+    <input type="password" id="password" placeholder="Passwort">
+    <button id="loginBtn">Login</button>
+</div>
+
+<div class="tool-container" id="toolPanel" style="display:none;">
+    <h1>Advanced File Encrypter</h1>
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="encryptTab">Encrypt</button>
+        <button class="tab-btn" data-tab="decryptTab">Decrypt</button>
     </div>
-    <script src="js/auth.js"></script>
+
+    <div class="tab-content active" id="encryptTab">
+        <h2>Encrypt File</h2>
+        <input type="file" id="fileInput">
+        <input type="password" id="encPassword" placeholder="Passwort">
+        <button id="encryptBtn">Encrypt</button>
+        <a id="downloadLink" style="display:none;">Download .afe</a>
+        <div id="encryptStatus" class="status"></div>
+    </div>
+
+    <div class="tab-content" id="decryptTab">
+        <h2>Decrypt File</h2>
+        <input type="file" id="fileInputDec">
+        <input type="password" id="decPassword" placeholder="Passwort">
+        <button id="decryptBtn">Decrypt</button>
+        <a id="downloadLinkDec" style="display:none;">Download Original</a>
+        <div id="decryptStatus" class="status"></div>
+    </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/encrypt.js"></script>
+<script src="js/decrypt.js"></script>
+<script src="js/tabs.js"></script>
 </body>
 </html>
